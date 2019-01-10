@@ -17,10 +17,10 @@ ln -s ~/.tristan/bash_profile ~/.bash_profile
 [[ -d ~/.vim/colors ]] && mv ~/.vim/colors ~/.vim/colors.bak
 ln -s ~/.tristan/vim/colors ~/.vim/colors
 echo "source-file ~/.tristan/tmux.conf" >> ~/.tmux.conf
-echo "so ~/.tristan/vimrc" >> ~/.vimrc
 echo -e "[include]\n  path = ~/.tristan/gitconfig" >> ~/.gitconfig
-git clone git@github.com:gmarik/Vundle.vim.git ~/.tristan/vim/bundle/Vundle.vim
-vim +PluginInstall +qall
+echo "so ~/.tristan/vimrc.local" >> ~/.vimrc.local
+echo "so ~/.tristan/vimrc.bundles.local" >> ~/.vimrc.bundles.local
+curl http://j.mp/spf13-vim3 -L -o - | sh
 ```
 
 ### Notes
